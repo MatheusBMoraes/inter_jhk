@@ -1,0 +1,239 @@
+:root {
+    --bg-dark: #121212;
+    --bg-card: #2C2C2E;
+    --primary-orange: #FF7A00;
+    --text-primary: #FFFFFF;
+    --text-secondary: #B0B0B0;
+    --border-color: #444444;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #333;
+    color: var(--text-primary);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.mobile-container {
+    width: 100%;
+    max-width: 400px;
+    height: 850px;
+    background-color: var(--bg-dark);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.back-arrow, .status-icons {
+    font-size: 1.2em;
+}
+
+main {
+    padding: 0 20px;
+    overflow-y: auto;
+}
+
+.balance-section {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.total-balance {
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.total-yield {
+    color: var(--primary-orange);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.btn-create {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    background-color: transparent;
+    color: var(--text-primary);
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.auto-save {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-card);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.auto-save h2 {
+    font-size: 1em;
+    margin: 0 0 5px 0;
+}
+
+.auto-save p {
+    font-size: 0.8em;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.arrow-right {
+    font-size: 1.5em;
+    color: var(--text-secondary);
+}
+
+.piggy-banks-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 0.9em;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.card-balance {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.card-yield {
+    font-size: 0.8em;
+    color: var(--text-secondary);
+}
+
+[contenteditable="true"] {
+    outline: none;
+    border-bottom: 1px dashed var(--primary-orange);
+    padding-bottom: 2px;
+}
+
+/* --- Estilos do Modal --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none; /* Inicia escondido */
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.modal-content {
+    background-color: #3a3a3c;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.8em;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+#modal-available-balance {
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
+
+.rescue-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--primary-orange);
+    color: var(--text-primary);
+    font-size: 2em;
+    font-weight: 700;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.rescue-input:focus {
+    outline: none;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.modal-buttons button {
+    flex-grow: 1;
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-account {
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+}
+
+.btn-rescue {
+    background-color: var(--primary-orange);
+    color: var(--text-primary);
+}

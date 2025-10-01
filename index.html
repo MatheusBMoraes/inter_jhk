@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Porquinho - Inter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="mobile-container">
+        <header>
+            <div class="back-arrow">←</div>
+            <h1>Meu Porquinho</h1>
+            <div class="status-icons">...</div>
+        </header>
+
+        <main>
+            <section class="balance-section">
+                <div class="total-balance" contenteditable="true">R$ 6.299,52</div>
+                <div class="total-yield">Rendeu <span contenteditable="true">R$ 117,88</span></div>
+                <button class="btn-create">Criar Porquinho</button>
+            </section>
+
+            <section class="auto-save">
+                <div>
+                    <h2>Guardar automaticamente</h2>
+                    <p>Transforme seus cashbacks e rendimentos em dinheiro guardado.</p>
+                </div>
+                <div class="arrow-right">></div>
+            </section>
+
+            <section class="piggy-banks-grid">
+                <div class="card" data-title="Dia a Dia">
+                    <div class="card-icon">🐷</div>
+                    <div class="card-title">Dia a Dia</div>
+                    <div class="card-balance" contenteditable="true">R$ 2,00</div>
+                    <div class="card-yield">Rendeu <span contenteditable="true">R$ 0,36</span></div>
+                </div>
+
+                <div class="card" data-title="Porquinho mais limite">
+                    <div class="card-icon">💳</div>
+                    <div class="card-title">Porquinho mais limite</div>
+                    <div class="card-balance" contenteditable="true">R$ 0,00</div>
+                    <div class="card-yield">Rendeu <span contenteditable="true">R$ 0,00</span></div>
+                </div>
+
+                <div class="card" data-title="Rendimento Passivo">
+                    <div class="card-icon">💰</div>
+                    <div class="card-title">Rendimento Passivo</div>
+                    <div class="card-balance" contenteditable="true">R$ 6114,26</div>
+                    <div class="card-yield">Rendeu <span contenteditable="true">R$ 114,26</span> ↑</div>
+                </div>
+
+                <div class="card" data-title="Topique">
+                    <div class="card-icon">🚗</div>
+                    <div class="card-title">Topique</div>
+                    <div class="card-balance" contenteditable="true">R$ 183,26</div>
+                    <div class="card-yield">Rendeu <span contenteditable="true">R$ 3,26</span> ↑</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="rescue-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Resgatar</h2>
+            <p id="modal-available-balance">Saldo disponível para resgate: R$ 0,00</p>
+            <input type="text" class="rescue-input" placeholder="R$ 0,00">
+            <div class="modal-buttons">
+                <button class="btn-account">Guardar</button>
+                <button class="btn-rescue">Resgatar</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
